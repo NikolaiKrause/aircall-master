@@ -33,15 +33,28 @@ class Call extends React.Component {
         blurb = `called ${to}`;
     }
 
+    // Display minutes if call length is greater than 30 seconds
+    var duration = this.props.duration, displayDuration;
+    if (duration > 30) displayDuration = `${Math.round(duration/60)} min`
+
+    var displayTime = new Date(Date.parse(this.props.created_at))
+      .toLocaleTimeString('en-US', {timezone: 'EST'})
+
     return (
       <div className={`call ${this.props.call_type} ${this.props.is_archived ? 'archived': ''}`}>
         <div className='direction-arrow'>
-          <FontAwesomeIcon icon={directionIcon}/>
+          <div className='arrow-icon'>
+            <FontAwesomeIcon icon={directionIcon}/>
+          </div>
+          <p className='duration'>
+            {displayDuration}
+          </p>
         </div>
         <div className='call-body'>
           <p className='from'>{this.props.from}</p>
           <p className='to'>{blurb}</p>
           <p className='via'>{this.props.via}</p>
+          <p className='date'>{displayTime}</p>
         </div>
         <div className='archive-button'>
           <button
