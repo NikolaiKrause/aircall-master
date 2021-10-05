@@ -37,8 +37,12 @@ class Call extends React.Component {
     var duration = this.props.duration, displayDuration;
     if (duration > 30) displayDuration = `${Math.round(duration/60)} min`
 
-    var displayTime = new Date(Date.parse(this.props.created_at))
-      .toLocaleTimeString('en-US', {timezone: 'EST'})
+    var date = new Date(Date.parse(this.props.created_at))
+    var displayTime = `${date.toLocaleDateString('en-US')} ${date.toLocaleTimeString('en-US', {
+        hour: '2-digit', 
+        minute:'2-digit'
+      })}`
+    
 
     return (
       <div className={`call ${this.props.call_type} ${this.props.is_archived ? 'archived': ''}`}>
