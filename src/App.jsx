@@ -58,7 +58,7 @@ class App extends React.Component {
     // Decide what content can be viewed based on 'view' state
     var content;
     if (this.state.view=='loading') {
-      content = 'Loading';
+      content = <div className='loading'>Loading...</div>;
     } else {
       // Calls are selected based on 'view' state
       var calls;
