@@ -1,0 +1,62 @@
+.call {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+.call:not(:last-child) {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Direction Arrows */
+.call .direction-arrow {
+    margin: auto 20px auto 0;
+}
+
+.call.answered .direction-arrow {
+    color: #2ac420;
+}
+
+.call.missed .direction-arrow {
+    color: #c4202b;
+}
+
+.call.voicemail .direction-arrow {
+    color: #424242;
+}
+
+/* Call Body */
+.call .call-body {
+    flex-grow: 1;
+}
+
+.call-body p {
+    margin: 0;
+}
+
+.call-body p:not(:last-child) {
+    margin-bottom: 0.2em;
+}
+
+.call-body .from {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.call.archived .call-body, .call.archived button {
+    color: grey;
+    fill: grey;
+}
+
+/* Archive button */
+.archive-button {
+    display: flex;
+    width: 2em;
+}
+
+.archive-button button {
+    border: none;
+    background: none;
+    flex-grow: 1;
+    cursor: pointer;
+}

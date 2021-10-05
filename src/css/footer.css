@@ -1,0 +1,24 @@
+footer {
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+footer .nav-button {
+  display: flexbox;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  background: none;
+  color: #424242;
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+footer .nav-button.selected {
+  color: #2ac420;
+  border-bottom: 3px solid #2ac420;
+}
