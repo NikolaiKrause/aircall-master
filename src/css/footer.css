@@ -16,6 +16,8 @@ footer .nav-button {
   color: #424242;
   border: none;
   border-bottom: 3px solid transparent;
+
+  cursor: pointer;
 }
 
 footer .nav-button.selected {
