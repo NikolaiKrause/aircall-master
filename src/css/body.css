@@ -13,8 +13,3 @@ body {
   color: #333333;
   line-height: 1;
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-}

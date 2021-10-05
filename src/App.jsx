@@ -44,7 +44,6 @@ class App extends React.Component {
         calls: response,
         view: 'inbox'
       });
-      console.log(response);
     })
   }
 
